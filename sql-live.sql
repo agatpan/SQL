@@ -54,13 +54,20 @@ ALTER TABLE Books DROP COLUMN abstract;
 ALTER TABLE Books ADD COLUMN abstract TEXT AFTER title;
 ALTER TABLE Books ADD COLUMN abstract TEXT FIRST;
 
-
 -- ZADANIE 2
 
 
 -- 7. usuwanie tabeli (DROP TABLE)
+DROP TABLE Books;
 
 -- 8. dodawanie nowych rekordów (INSERT)
+
+-- INSERT INTO [nazwa tabeli] (name, price) VALUES ('nazwa', 'cena');
+DESCRIBE Books;
+INSERT INTO Books (title, author) VALUES ('Testament', 'Mróz');
+
+-- INSERT INTO [nazwa tabeli] VALUES (id, name, price, stock);
+INSERT INTO Books VALUES ('Lorem ipsum...', '123-123-123-2', 'Testament', 'Mróz', 78, true);
 
 
 
