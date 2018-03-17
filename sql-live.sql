@@ -1,8 +1,8 @@
 -- @title infoShare Academy - kurs SQL
 -- @author Mateusz Marmołowski
 # www.cta.ai
-# www.professor-why.pl
 # www.edu-sense.pl
+# www.professor-why.pl
 
 
 
@@ -30,12 +30,30 @@
 -- https://dev.mysql.com/doc/refman/5.7/en/char.html
 
 -- 5. tworzenie nowej tabeli "User" (CREATE TABLE + DESCRIBE)
+CREATE TABLE Books (
+  isbn CHAR(13),
+  title VARCHAR(100),
+  author VARCHAR(100),
+  pages SMALLINT,
+  hardcover BOOLEAN
+);
+
+DROP TABLE Books2;
 
 
 -- ZADANIE 1
 
 
 -- 6. zmiana nazwy i rozszerzanie tabeli (RENAME TABLE oraz ALTER TABLE ADD/DROP/RENAME TO)
+
+RENAME TABLE Ksiazki TO Books;
+
+ALTER TABLE Books MODIFY title VARCHAR(100);
+ALTER TABLE Books ADD COLUMN abstract TEXT;
+ALTER TABLE Books DROP COLUMN abstract;
+ALTER TABLE Books ADD COLUMN abstract TEXT AFTER title;
+ALTER TABLE Books ADD COLUMN abstract TEXT FIRST;
+
 
 -- ZADANIE 2
 

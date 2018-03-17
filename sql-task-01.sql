@@ -1,2 +1,8 @@
--- ZADANIE 1 - utwórz tablicę Products z kolumnami jakie uważasz za konieczne
-
+-- ZADANIE 1 - utwórz tablicę Products z kolumnami id, name, manufacturer, price
+DROP TABLE Products;
+CREATE TABLE Products (
+  id INT,
+  name VARCHAR(100),
+  manufacturer VARCHAR(100),
+  netprice DECIMAL(7,2)
+);
